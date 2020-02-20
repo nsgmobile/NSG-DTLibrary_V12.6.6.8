@@ -1012,8 +1012,9 @@ import static java.lang.Math.sin;
              double returnedDistance = showDistance(currentGpsPosition, nearest_LatLng_deviation);
              Log.e("Route Deviation","ROUTE DEVIATION DISTANCE RETURNED ----"+returnedDistance);
              tv1.setText("DEVIATION DISTANCE : " + returnedDistance);
+            // Toast.makeText(getContext(),"DEVIATION DISTANCE : "+ returnedDistance",Toast.LENGTH_SHORT).show();
 
-            // drawMarkerWithCircle(PrevousGpsPosition, markDistance);
+             // drawMarkerWithCircle(PrevousGpsPosition, markDistance);
             // double distanceAtRouteDeviation = distFrom(currentGpsPosition.latitude, currentGpsPosition.longitude, mCircle.getCenter().latitude, mCircle.getCenter().longitude);
             // Log.e("Route Deviation","ROUTE DEVIATION DISTANCE ----"+  distanceAtRouteDeviation);
              //Log.e("Route Deviation","CIRCLE RADIUS----"+  mCircle.getRadius());
