@@ -365,6 +365,8 @@ import static java.lang.Math.sin;
             re_center.setOnClickListener(NSGIMapFragmentActivity.this);
             change_map_options = (ImageButton)rootView.findViewById(R.id.change_map_options);
             change_map_options.setOnClickListener(NSGIMapFragmentActivity.this);
+
+            tv1=(TextView) rootView.findViewById(R.id.tv1);
             // Delete Contents fron ROUTE_T On initialisation of Route view
             String delQuery = "DELETE  FROM " + RouteT.TABLE_NAME;
             sqlHandler.executeQuery(delQuery);
@@ -1009,6 +1011,7 @@ import static java.lang.Math.sin;
              LatLng nearest_LatLng_deviation= GetNearestPointOnRoadFromGPS(PrevousGpsPosition,currentGpsPosition);
              double returnedDistance = showDistance(currentGpsPosition, nearest_LatLng_deviation);
              Log.e("Route Deviation","ROUTE DEVIATION DISTANCE RETURNED ----"+returnedDistance);
+             tv1.setText("DEVIATION DISTANCE : " + returnedDistance);
 
             // drawMarkerWithCircle(PrevousGpsPosition, markDistance);
             // double distanceAtRouteDeviation = distFrom(currentGpsPosition.latitude, currentGpsPosition.longitude, mCircle.getCenter().latitude, mCircle.getCenter().longitude);
