@@ -1022,6 +1022,8 @@ import static java.lang.Math.sin;
              //  Log.e("Route Deviation","ROUTE DEVIATION ANGLE ----"+ rotateBearing);
 
              if(returnedDistance>routeDeviationDistance){
+                 tv1.setText("DEVIATION DISTANCE : " + returnedDistance);
+
                  String cgpsLat = String.valueOf(currentGpsPosition.latitude);
                  String cgpsLongi = String.valueOf(currentGpsPosition.longitude);
                  final String routeDiationPosition = cgpsLongi.concat(" ").concat(cgpsLat);
